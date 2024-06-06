@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RealTimeWebApp", "RealTimeWebApp.csproj", "{4FB572B5-7252-43B9-A323-0AC09FC90480}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FB572B5-7252-43B9-A323-0AC09FC90480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB572B5-7252-43B9-A323-0AC09FC90480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB572B5-7252-43B9-A323-0AC09FC90480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB572B5-7252-43B9-A323-0AC09FC90480}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8301E875-81D2-4F0C-818F-6CF997190FAD}
+	EndGlobalSection
+EndGlobal

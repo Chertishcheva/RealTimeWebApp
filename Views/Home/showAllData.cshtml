@@ -1,0 +1,41 @@
+﻿@model IEnumerable<RealTimeWebApp.Models.ExampleDataModel>
+
+@{
+    ViewData["Title"] = "showAllData";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                id
+            </th>
+            <th>
+                Інформація
+            </th>
+            <th>
+                Час оновлення
+            </th>
+            <th>
+                Час відображення
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = Model.Count() - 1; i >= 0; i--)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.ElementAt(i).id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.ElementAt(i).data)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.ElementAt(i).timeOfUpload)
+                </td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>

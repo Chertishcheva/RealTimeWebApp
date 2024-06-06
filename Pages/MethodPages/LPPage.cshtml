@@ -1,0 +1,20 @@
+﻿@page
+@model RealTimeWebApp.Pages.MethodPages.LPPageModel
+@{
+    ViewData["Title"] = "LP";
+}
+<h2 class="infoTablet"> Long Polling </h2>
+<p class="infoTablet">
+    Передача інформації за допомоги<br>
+    постійних опитувань сервера з боку клієнта
+</p>
+<table id="dataTable"></table>
+
+<div class="waitMessage" id="waitMessage">
+    <h5 class="hWait">Йде підключення</h5>
+    <p class="pWait">Йде підключення до ресурсу, зачекайте встановлення з'єднання, будь ласка</p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="~/js/site.js"></script>
+<script src="~/js/LongPollingScript.js"></script>
