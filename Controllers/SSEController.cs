@@ -37,7 +37,7 @@ namespace RealTimeWebApp.Controllers
                 await Response.WriteAsync($"data: update table request" + "\n\n");
                 Response.Body.Flush();
 
-                String updateMessage ;
+                String updateMessage ="";
                 SQLdependency.OnChanged += (sender, e) =>
                 {
                     updateMessage = JsonSerializer.Serialize(e.Entity);
@@ -49,10 +49,8 @@ namespace RealTimeWebApp.Controllers
                 {
                     SQLdependency.Start();
 
-                    while (true)
-                    {
-                        if (cancToken.IsCancellationRequested)
-                            break;
+                    while (!cancToken.IsCancellationRequested){
+                        Thread.Sleep(2000);
                     };
 
                     SQLdependency.Stop();
@@ -70,3 +68,4 @@ namespace RealTimeWebApp.Controllers
         }
     }
 }
+

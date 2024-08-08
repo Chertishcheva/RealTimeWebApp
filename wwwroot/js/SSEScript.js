@@ -10,3 +10,6 @@ eventSource.onmessage = (message) => {
         entityUpdate(object);
     }
 };
+onbeforeunload = (event) => {
+    eventSource.close();
+};
