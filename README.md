@@ -62,10 +62,8 @@ using (SQLdependency = new SqlTableDependency<ExampleDataModel>(connectionString
   <code>
     SQLdependency.Start();
 
-    while (true)
-    {
-        if (cancToken.IsCancellationRequested)
-        break;
+    while (!cancToken.IsCancellationRequested){
+        Thread.Sleep(2000);
     };
 
     SQLdependency.Stop();
@@ -82,7 +80,7 @@ using (SQLdependency = new SqlTableDependency<ExampleDataModel>(connectionString
 Надіслане сервером повідомлення приходить назад до клієнта, де воно обробляється та виводиться на сайт:
 <pre>
   <code>
-eventSource.onmessage = (message) => {
+    eventSource.onmessage = (message) => {
     tableUpdate();
     eventSource.onmessage = (message) => {
         let object = JSON.parse(message.data);
